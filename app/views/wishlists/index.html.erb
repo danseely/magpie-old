@@ -2,7 +2,12 @@
 
 <ul>
 
-  <li><%= @books.name%> — <%="#{@books.items.count}" %> items</li>
-  <li><%= @music.name%> — <%="#{@music.items.count}" %> items</li>
+  <% if @lists == []%>
+    <h2>Oops, you don't have any lists yet!</h2>
+  <% else %>
+    <% @lists.each do |i| %>
+      <li><%="#{i.name}"%> — <%="#{i.item_count}"%></li>
+    <% end %>
+  <% end %>
 
 </ul>

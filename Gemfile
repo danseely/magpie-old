@@ -7,6 +7,7 @@ gem 'rails', '3.2.13'
 
 gem 'pg'
 gem 'unicorn'
+gem 'sqlite3'
 
 
 # Gems used only for assets and not required
@@ -40,6 +41,7 @@ gem 'jquery-rails'
 
 group :test, :development do
   gem 'minitest-rails'
+  gem 'factory_girl_rails', '~> 4.0.0'
 end
 
 group :development do
