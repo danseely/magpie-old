@@ -1,5 +1,5 @@
 class CreateWishlists < ActiveRecord::Migration
-  def up
+  def change
     create_table :wishlists do |t|
       t.string :name
       t.integer :item_count
@@ -8,7 +8,4 @@ class CreateWishlists < ActiveRecord::Migration
     end
   end
 
-  def down
-      drop_table :wishlists
-  end
 end

@@ -3,6 +3,7 @@ Magpie::Application.routes.draw do
   # first created -> highest priority.
 
   root :to => 'wishlists#index'
+  resources :users
   # NOPE - match '/wishlists/:id' => 'wishlists#single'
 
   # Sample of regular route:
