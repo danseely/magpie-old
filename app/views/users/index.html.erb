@@ -1,0 +1,14 @@
+<h1>All Users</h1>
+
+<ul>
+
+  <% if @users == []%>
+    <h2>There are no users yet</h2>
+  <% else %>
+    <% @users.each do |i| %>
+      <li><%="#{i.username}"%> — <%="#{i.email}"%></li>
+    <% end %>
+  <% end %>
+
+</ul>
+
