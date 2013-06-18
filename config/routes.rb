@@ -4,6 +4,7 @@ Magpie::Application.routes.draw do
 
   root :to => 'wishlists#index'
   resources :users
+  resources :wishlists
   # NOPE - match '/wishlists/:id' => 'wishlists#single'
 
   # Sample of regular route:

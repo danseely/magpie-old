@@ -1,7 +1,7 @@
 require 'test_helper'
 
-feature 'Signup Feature Test' do
-  scenario 'signing up with valid data' do
+feature 'Display Single User Feature Test' do
+  scenario 'visiting a single user page' do
     user = FactoryGirl.build :user
     visit new_user_path
     fill_in 'Email', with: user.email
@@ -9,8 +9,7 @@ feature 'Signup Feature Test' do
     fill_in 'Password', with: user.password
     click_button 'Create User'
     new_user = User.last
-    new_user.email.must_equal user.email
-    new_user.username.must_equal user.username
-    new_user.password.must_equal user.password
+    visit user_path(new_user.id)
+    current_url.must_equal ('http://www.example.com/users/' + new_user.id.to_s)
   end
 end
