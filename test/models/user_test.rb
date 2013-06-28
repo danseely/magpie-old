@@ -47,9 +47,9 @@ describe User do
 
   end
 
-  describe 'associations' do
-    it 'can have many wishlists' do
-      # implement these steps
-    end
-  end
+  # describe 'associations' do
+  #   it 'can have many wishlists' do
+  #     # implement these steps
+  #   end
+  # end
 end
