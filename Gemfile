@@ -24,6 +24,8 @@ end
 
 gem 'jquery-rails'
 
+gem 'sorcery'
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
@@ -40,6 +42,7 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 group :test, :development do
+  gem 'm'
   gem 'minitest-rails'
   gem 'factory_girl_rails', '~> 4.0.0'
 end

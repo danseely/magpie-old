@@ -14,15 +14,15 @@ feature 'Displaying Wishlists Feature Test' do
     end
 
     scenario 'displaying the wishlist item count' do
-      page.must_have_content '(12)'
-      page.must_have_content '(32)'
+      page.must_have_content '12'
+      page.must_have_content '32'
     end
   end
 
   describe 'without wishlists' do
     scenario 'displaying an empty list' do
       visit lists_path
-      page.must_have_content 'You currently do not have any wish lists'
+      page.must_have_content "Oops, you don't have any lists yet!"
     end
   end
 end

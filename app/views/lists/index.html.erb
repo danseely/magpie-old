@@ -1,0 +1,13 @@
+<h1>My Wishlists:</h1>
+
+<ul>
+
+  <% if @lists == []%>
+    <h2>Oops, you don't have any lists yet!</h2>
+  <% else %>
+    <% @lists.each do |i| %>
+      <li><%="#{i.name}"%> — <%="#{i.item_count}"%></li>
+    <% end %>
+  <% end %>
+
+</ul>

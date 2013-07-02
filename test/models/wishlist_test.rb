@@ -6,7 +6,9 @@ describe Wishlist do
       # implement these steps
       w = FactoryGirl.build :wishlist
       u = FactoryGirl.build :user
-      w.user_id = u.id
+      w.user = u
+      w.save!
+      w.user_id.must_equal u.id
     end
   end
 end

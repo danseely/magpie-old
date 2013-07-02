@@ -47,9 +47,12 @@ describe User do
 
   end
 
-  # describe 'associations' do
-  #   it 'can have many wishlists' do
-  #     # implement these steps
-  #   end
-  # end
+  describe 'associations' do
+    it 'can have many wishlists' do
+      u = FactoryGirl.build :user
+      w = FactoryGirl.build :wishlist
+      u.wishlists << w
+      u.wishlists.must_equal [w]
+    end
+  end
 end
